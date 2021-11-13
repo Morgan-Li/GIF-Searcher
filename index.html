@@ -5,13 +5,18 @@
   <title>GIF-Searcher</title>
   <link href="styles.css" rel="stylesheet"> 
 </head>
+<header> 
+    <form id="form" action="/search-input" method="post">
+        <label for="search">Search for a GIF:</label>
+        <input type="text" id="search" name="search-term">
+    </form>
+    <button id ="submitBtn" type="submit">Submit</button>
+    <button id ="refreshBtn" type="refresh">Refresh</button>
+</header>
+
+<img src="#" alt="gif" id='GIF'>
+<div for="GIF-url" id="GIF-URL"> GIF URL: </div>
+
 <body>
-  <img src="#" alt="cat">
-  <form id="form" action="/search-input" method="post">
-    <label for="search">Search for a GIF:</label>
-    <input type="text" id="search" name="search-term">
-  </form>
-  <button id ="submitBtn" type="submit">Submit</button>
-  <button id ="refreshBtn" type="refresh">Refresh</button>
   <script src=script.js></script>
 </body>

@@ -5,4 +5,20 @@ body {
     height: 90vh;
     align-items: center;
     justify-content: center;
-  }
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    padding-bottom: 10vh;
+}
+
+#GIF-URL {
+    display: flex;
+    padding-top: 5vh;
+}
+
+#GIF {
+    max-width: 50vw;
+    max-height: 50vh;
+}

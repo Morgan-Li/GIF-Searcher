@@ -1,6 +1,6 @@
 const img = document.querySelector('img')
-const submit = document.getElementById('submitBtn');
-const refresh = document.getElementById('refreshBtn');
+const submit = document.getElementById('submitBtn')
+const refresh = document.getElementById('refreshBtn')
 
 fetch('https://api.giphy.com/v1/gifs/translate?api_key=bb2006d9d3454578be1a99cfad65913d&s=cat', {mode: 'cors'})
   .then(function(response) {
@@ -8,6 +8,7 @@ fetch('https://api.giphy.com/v1/gifs/translate?api_key=bb2006d9d3454578be1a99cfa
   })
   .then(function(response) {
     img.src = response.data.images.original.url
+    document.getElementById("GIF-URL").innerHTML = 'GIF URL: ' + response.data.images.original.url
   })
   .catch(e => {
     console.log(e)
@@ -23,6 +24,7 @@ submit.addEventListener("click", () => {
   })
   .then(function(response) {
     img.src = response.data.images.original.url
+    document.getElementById("GIF-URL").innerHTML = 'GIF URL: ' + response.data.images.original.url
   })
   .catch(e => {
     console.log(e)
@@ -38,6 +40,7 @@ refresh.addEventListener("click", () => {
     })
     .then(function(response) {
       img.src = response.data.images.original.url
+      document.getElementById("GIF-URL").innerHTML = 'GIF URL: ' + response.data.images.original.url
     })
     .catch(e => {
       console.log(e)
